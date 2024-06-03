@@ -60,7 +60,7 @@ public class SimpleHttpServer2 {
 			exchange.sendResponseHeaders(200, response.length());
 			
 			PrintWriter writer = new PrintWriter(exchange.getResponseBody(), true);
-			writer.append(response);
+			writer.println(response);
 			writer.flush();
 			writer.close();
 			
